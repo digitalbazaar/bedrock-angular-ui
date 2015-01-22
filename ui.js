@@ -1,69 +1,42 @@
 /*!
- * Utility module.
+ * UI Utility module.
  *
- * Copyright (c) 2012-2014 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2015 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
 define([
   'angular',
   './action-menu-directive',
-  './ceil-filter',
-  './bytes-filter',
-  './ellipsis-filter',
-  './embedded-string-filter',
-  './encodeuricomponent-filter',
   './error-directive',
-  './floor-filter',
   './headline-directive',
-  './lazy-compile-directive',
-  './mask-filter',
-  './model-service',
-  './now-filter',
-  './prefill-filter',
-  './refresh-service',
-  './resource-service',
+  './placeholder-directive',
+  './slug-filter',
+  './slug-in-directive',
+  './tabs-directive',
   './tooltip-directive'
 ], function(
   angular,
   actionMenuDirective,
-  ceil,
-  bytes,
-  ellipsis,
-  embeddedString,
-  encodeURIComponent_,
-  error,
-  floor,
+  errorDirective,
   headlineDirective,
-  lazyCompileDirective,
-  mask,
-  modelService,
-  now,
-  prefill,
-  refreshService,
-  resourceService,
+  placeholderDirective,
+  slugFilter,
+  slugInDirective,
+  tabsDirective,
   tooltipDirective) {
 
 'use strict';
 
-var module = angular.module('app.util', []);
+var module = angular.module('bedrock.ui', []);
 
 module.directive(actionMenuDirective);
-module.filter(ceil);
-module.filter(bytes);
-module.filter(ellipsis);
-module.filter(embeddedString);
-module.filter(encodeURIComponent_);
-module.directive(error);
-module.filter(floor);
+module.directive(errorDirective);
 module.directive(headlineDirective);
-module.directive(lazyCompileDirective);
-module.filter(mask);
-module.service(modelService);
-module.filter(now);
-module.filter(prefill);
-module.service(refreshService);
-module.service(resourceService);
+module.directive(placeholderDirective);
+module.filter(slugFilter);
+module.directive(slugInDirective);
+module.directive(tabsDirective);
 module.directive(tooltipDirective);
 
 return module.name;
