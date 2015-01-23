@@ -1,6 +1,7 @@
 {
   "name": "bedrock-angular-ui",
-  "main": "./app.js",
+  "main": "./ui.js",
+  "moduleType": ["amd"],
   "ignore": [],
   "dependencies": {
   }
