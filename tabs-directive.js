@@ -7,9 +7,11 @@
  *
  * @author David I. Lehn
  */
-define(['angular'], function(angular) {
+define(['angular', 'module'], function(angular, module) {
 
 'use strict';
+
+var modulePath = module.uri.substr(0, module.uri.lastIndexOf('/')) + '/';
 
 var deps = [];
 return {
@@ -71,7 +73,7 @@ function tabsFactory() {
     transclude: true,
     scope: {},
     controller: Ctrl,
-    templateUrl: '/app/components/tabs/tabs.html'
+    templateUrl: modulePath + 'tabs.html'
   };
 }
 
@@ -104,7 +106,7 @@ function tabsPaneFactory() {
       index: '=?brTabPaneIndex'
     },
     link: Link,
-    templateUrl: '/app/components/tabs/tabs-pane.html'
+    templateUrl: modulePath + 'tabs-pane.html'
   };
 }
 
