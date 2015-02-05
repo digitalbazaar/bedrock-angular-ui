@@ -6,18 +6,16 @@
  * @author David I. Lehn
  * @author Dave Longley
  */
-define(['module'], function(module) {
+define([], function() {
 
 'use strict';
-
-var modulePath = module.uri.substr(0, module.uri.lastIndexOf('/')) + '/';
 
 /* @ngInject */
 function factory() {
   return {
     restrict: 'A',
     scope: {error: '=brErrorView'},
-    templateUrl: modulePath + 'error-view.html',
+    templateUrl: requirejs.toUrl('bedrock-angular-ui/error-view.html'),
     link: Link
   };
 }

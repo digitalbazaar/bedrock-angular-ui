@@ -7,11 +7,9 @@
  *
  * @author David I. Lehn
  */
-define(['angular', 'module'], function(angular, module) {
+define(['angular'], function(angular) {
 
 'use strict';
-
-var modulePath = module.uri.substr(0, module.uri.lastIndexOf('/')) + '/';
 
 var deps = [];
 return {
@@ -73,7 +71,7 @@ function tabsFactory() {
     transclude: true,
     scope: {},
     controller: Ctrl,
-    templateUrl: modulePath + 'tabs.html'
+    templateUrl: requirejs.toUrl('bedrock-angular-ui/tabs.html')
   };
 }
 
@@ -106,7 +104,7 @@ function tabsPaneFactory() {
       index: '=?brTabPaneIndex'
     },
     link: Link,
-    templateUrl: modulePath + 'tabs-pane.html'
+    templateUrl: requirejs.toUrl('bedrock-angular-ui/tabs-pane.html')
   };
 }
 
