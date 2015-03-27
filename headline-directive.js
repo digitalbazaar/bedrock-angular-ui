@@ -18,6 +18,7 @@ function factory() {
       loading: '=?brLoading'
     },
     transclude: true,
+    /* jshint multistr: true */
     template: '\
       <h3 class="headline"> \
         {{title}} \

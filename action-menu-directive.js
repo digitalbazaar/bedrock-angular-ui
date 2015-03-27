@@ -15,6 +15,7 @@ function factory() {
     restrict: 'E',
     scope: {},
     transclude: true,
+    /* jshint multistr: true */
     template: '\
       <div class="btn-group"> \
         <button type="button" class="btn btn-default btn-sm" \
