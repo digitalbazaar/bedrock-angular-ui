@@ -4,18 +4,6 @@ A [bedrock][] [AngularJS][] module that provides various UI components.
 
 Uses features from [bedrock-angular][].
 
-<!--
-## Quick Examples
-
-```html
-<!-- ... TODO ... -->
-```
-
-```js
-// ... TODO ...
-```
--->
-
 ## Setup
 
 ```
