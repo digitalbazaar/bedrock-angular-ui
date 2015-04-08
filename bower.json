@@ -1,6 +1,6 @@
 {
   "name": "bedrock-angular-ui",
-  "version": "0.1.1-dev",
+  "version": "1.0.0",
   "main": ["./ui.js", "./ui.less"],
   "moduleType": ["amd"],
   "ignore": [
@@ -8,6 +8,6 @@
     "bedrock.json"
   ],
   "dependencies": {
-    "bedrock-angular": "~0.1.0"
+    "bedrock-angular": "^1.0.0"
   }
 }
