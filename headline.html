@@ -1,0 +1,22 @@
+<h3 class="headline">
+  {{$ctrl.title}}
+  <span ng-hide="!$ctrl.options.menu || $ctrl.loading"
+    class="btn-group pull-right">
+    <button type="button"
+      class="btn btn-default btn-sm"
+      stackable-trigger="$ctrl.menu"
+      stackable-toggle="'active'">
+      <i class="fa fa-bars"></i>
+    </button>
+  </span>
+  <span ng-show="$ctrl.loading" class="pull-right">
+    <i class="fa fa-refresh fa-spin text-muted"></i>
+  </span>
+</h3>
+<stackable-popover stackable="$ctrl.menu"
+  stackable-hide-arrow="true"
+  stackable-placement="bottom"
+  stackable-alignment="right"
+  br-lazy-compile="$ctrl.menu.show" br-lazy-id="br-headline">
+  <div ng-transclude></div>
+</stackable-popover>

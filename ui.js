@@ -1,7 +1,7 @@
 /*!
  * UI Utility module.
  *
- * Copyright (c) 2012-2015 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2016 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
@@ -9,7 +9,7 @@ define([
   'angular',
   './action-menu-directive',
   './error-directive',
-  './headline-directive',
+  './headline-component',
   './placeholder-directive',
   './slug-filter',
   './slug-in-directive',
@@ -19,7 +19,7 @@ define([
   angular,
   actionMenuDirective,
   errorDirective,
-  headlineDirective,
+  headlineComponent,
   placeholderDirective,
   slugFilter,
   slugInDirective,
@@ -30,9 +30,14 @@ define([
 
 var module = angular.module('bedrock.ui', []);
 
+// TODO: convert other deps into `register` format and use a loop
+/*Array.prototype.slice.call(arguments, 1).forEach(function(dep) {
+  dep(module);
+});*/
+headlineComponent(module);
+
 module.directive(actionMenuDirective);
 module.directive(errorDirective);
-module.directive(headlineDirective);
 module.directive(placeholderDirective);
 module.filter(slugFilter);
 module.directive(slugInDirective);
