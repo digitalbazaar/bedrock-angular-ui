@@ -17,7 +17,7 @@ function register(module) {
     },
     controller: Ctrl,
     transclude: true,
-    templateUrl: requirejs.toUrl('bedrock-angular-ui/headline.html')
+    templateUrl: requirejs.toUrl('bedrock-angular-ui/headline-component.html')
   });
 }
 
