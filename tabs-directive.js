@@ -67,7 +67,7 @@ function tabsFactory() {
   }
 
   return {
-    restrict: 'A',
+    restrict: 'EA',
     transclude: true,
     scope: {},
     controller: Ctrl,
@@ -97,7 +97,7 @@ function tabsPaneFactory() {
 
   return {
     require: '^brTabs',
-    restrict: 'A',
+    restrict: 'EA',
     transclude: true,
     scope: {
       title: '@brTitle',
