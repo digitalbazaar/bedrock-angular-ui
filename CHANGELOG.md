@@ -1,5 +1,10 @@
 # bedrock-angular-ui ChangeLog
 
+## 2.1.0 - 2016-06-03
+
+## Added
+- Tab pane components can be used as elements.
+
 ## 2.0.1 - 2016-05-30
 
 ### Changed
