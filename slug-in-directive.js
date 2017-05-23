@@ -1,16 +1,14 @@
 /*!
  * Slug In directive.
  *
- * Copyright (c) 2012-2014 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define(['angular'], function(angular) {
-
-'use strict';
+import angular from 'angular';
 
 /* @ngInject */
-function factory($filter, $parse) {
+export default function factory($filter, $parse) {
   return {
     restrict: 'A',
     require: 'ngModel',
@@ -53,11 +51,12 @@ function factory($filter, $parse) {
         ' change' + namespace +
         ' input' + namespace +
         ' keyup' + namespace +
-        ' paste' + namespace, function() {
-        if(ngModel.$viewValue !== element.val()) {
-          ngModel.$setViewValue(element.val());
-        }
-      });
+        ' paste' + namespace,
+        function() {
+          if(ngModel.$viewValue !== element.val()) {
+            ngModel.$setViewValue(element.val());
+          }
+        });
 
       // always display model value (override view value)
       ngModel.$render = function() {
@@ -77,7 +76,3 @@ function factory($filter, $parse) {
     }
   };
 }
-
-return {brSlugIn: factory};
-
-});

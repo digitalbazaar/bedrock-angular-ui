@@ -1,21 +1,17 @@
 /*!
  * Error directive.
  *
- * Copyright (c) 2014-2015 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2014-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author David I. Lehn
  * @author Dave Longley
  */
-define([], function() {
-
-'use strict';
-
 /* @ngInject */
-function factory() {
+export default function factory() {
   return {
     restrict: 'A',
     scope: {error: '=brErrorView'},
-    templateUrl: requirejs.toUrl('bedrock-angular-ui/error-view.html'),
+    templateUrl: 'bedrock-angular-ui/error-view.html',
     link: Link
   };
 }
@@ -44,7 +40,3 @@ function Link(scope) {
     }
   });
 }
-
-return {brErrorView: factory};
-
-});

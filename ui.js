@@ -1,49 +1,30 @@
 /*!
  * UI Utility module.
  *
- * Copyright (c) 2012-2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define([
-  'angular',
-  './action-menu-directive',
-  './error-directive',
-  './headline-component',
-  './placeholder-directive',
-  './slug-filter',
-  './slug-in-directive',
-  './tabs-directive',
-  './tooltip-directive'
-], function(
-  angular,
-  actionMenuDirective,
-  errorDirective,
-  headlineComponent,
-  placeholderDirective,
-  slugFilter,
-  slugInDirective,
-  tabsDirective,
-  tooltipDirective) {
-
-'use strict';
+import angular from 'angular';
+import ActionMenuDirective from './action-menu-directive.js';
+import ErrorDirective from './error-directive.js';
+import HeadlineComponent from './headline-component.js';
+import PlaceholderDirective from './placeholder-directive.js';
+import SlugFilter from './slug-filter.js';
+import SlugInDirective from './slug-in-directive.js';
+import TabsComponent from './tabs-component.js';
+import TabsPaneDirective from './tabs-pane-directive.js';
+import TooltipDirective from './tooltip-directive.js';
 
 var module = angular.module('bedrock.ui', []);
 
-// TODO: convert other deps into `register` format and use a loop
-/*Array.prototype.slice.call(arguments, 1).forEach(function(dep) {
-  dep(module);
-});*/
-headlineComponent(module);
-
-module.directive(actionMenuDirective);
-module.directive(errorDirective);
-module.directive(placeholderDirective);
-module.filter(slugFilter);
-module.directive(slugInDirective);
-module.directive(tabsDirective);
-module.directive(tooltipDirective);
-
-return module.name;
-
-});
+module.component('brHeadline', HeadlineComponent);
+module.component('brTabs', TabsComponent);
+module.directive('brActionMenu', ActionMenuDirective);
+module.directive('brError', ErrorDirective);
+// polyfills "placeholder" attribute -- intentionally no "br" prefix
+module.directive('placeholder', PlaceholderDirective);
+module.directive('brSlugIn', SlugInDirective);
+module.directive('brTabsPane', TabsPaneDirective);
+module.directive('brTooltip', TooltipDirective);
+module.filter('slug', SlugFilter);

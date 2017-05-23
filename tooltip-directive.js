@@ -1,23 +1,18 @@
 /*!
  * Tooltip directive.
  *
- * Copyright (c) 2014 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2014-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define([], function() {
-
-'use strict';
-
 /* @ngInject */
-function factory() {
+export default function factory() {
   return {
     restrict: 'A',
     link: Link
   };
 
   function Link(scope, element, attrs) {
-    var show = false;
     var text;
     var options = {};
 
@@ -64,7 +59,3 @@ function factory() {
     }
   }
 }
-
-return {brTooltip: factory};
-
-});

@@ -1,16 +1,12 @@
 /*!
  * Action Menu directive.
  *
- * Copyright (c) 2014 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2014-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define([], function() {
-
-'use strict';
-
 /* @ngInject */
-function factory() {
+export default function factory() {
   return {
     restrict: 'E',
     scope: {},
@@ -33,7 +29,3 @@ function factory() {
       </stackable-popover>'
   };
 }
-
-return {brActionMenu: factory};
-
-});

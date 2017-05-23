@@ -1,16 +1,12 @@
 /*!
  * A polyfill for placeholder.
  *
- * Copyright (c) 2012-2014 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2012-2017 Digital Bazaar, Inc. All rights reserved.
  *
  * @author Dave Longley
  */
-define([], function() {
-
-'use strict';
-
 /* @ngInject */
-function factory() {
+export default function factory() {
   return {
     restrict: 'A',
     link: function(scope, element) {
@@ -20,8 +16,3 @@ function factory() {
     }
   };
 }
-
-// polyfills "placeholder" attribute -- intentionally no "br-" prefix
-return {placeholder: factory};
-
-});
