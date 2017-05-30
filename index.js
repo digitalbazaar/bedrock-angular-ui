@@ -16,7 +16,7 @@ import TabsComponent from './tabs-component.js';
 import TabsPaneDirective from './tabs-pane-directive.js';
 import TooltipDirective from './tooltip-directive.js';
 
-var module = angular.module('bedrock.ui', []);
+var module = angular.module('bedrock.ui', ['stackables']);
 
 module.component('brHeadline', HeadlineComponent);
 module.component('brTabs', TabsComponent);

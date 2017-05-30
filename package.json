@@ -1,0 +1,22 @@
+{
+  "name": "bedrock-angular-ui",
+  "version": "2.1.0",
+  "description": "A bedrock AngularJS module that provides various UI components.",
+  "main": "index.js",
+  "less": "ui.less",
+  "dependencies": {
+    "angular": "~1.6.4",
+    "angular-stackables": "^1.2.1"
+  },
+  "bedrock": {
+    "browserDependencies": "all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/bedrock-angular-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-angular-ui/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-angular-ui#readme"
+}
