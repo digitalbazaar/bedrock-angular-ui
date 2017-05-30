@@ -1,5 +1,12 @@
 # bedrock-angular-ui ChangeLog
 
+## 3.0.0 - 2017-05-30
+
+### Changed
+- **BREAKING**: Switch package manager from bower to npm.
+- **BREAKING**: Replace requirejs/amd with ES6 import.
+- Angular 1.6.x is required.
+
 ## 2.1.0 - 2016-06-03
 
 ## Added
