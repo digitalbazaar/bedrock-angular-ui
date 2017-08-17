@@ -3,7 +3,7 @@
   "version": "3.0.1-0",
   "description": "A bedrock AngularJS module that provides various UI components.",
   "main": "index.js",
-  "less": "ui.less",
+  "less": "main.less",
   "dependencies": {
     "angular": "~1.6.4",
     "angular-stackables": "^1.2.1"
