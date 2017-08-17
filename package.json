@@ -6,6 +6,7 @@
   "less": "main.less",
   "dependencies": {
     "angular": "~1.6.4",
+    "bedrock-angular-material": "^1.0.0",
     "angular-stackables": "^1.2.1"
   },
   "bedrock": {
