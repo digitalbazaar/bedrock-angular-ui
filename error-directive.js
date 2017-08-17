@@ -17,7 +17,7 @@ export default function factory() {
 }
 
 function Link(scope) {
-  var model = scope.model = {};
+  const model = scope.model = {};
   model.error = null;
   // guess at useful simple cause output
   model.cause = null;

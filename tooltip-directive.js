@@ -13,8 +13,8 @@ export default function factory() {
   };
 
   function Link(scope, element, attrs) {
-    var text;
-    var options = {};
+    let text;
+    let options = {};
 
     attrs.$observe('brOptions', function(value) {
       options = value ? scope.$eval(value) : {};
@@ -40,7 +40,7 @@ export default function factory() {
         return;
       }
       // add new tooltip to appropriate container
-      var container;
+      let container;
       if(element.closest('.btn-group').length ||
         element.closest('.input-group')) {
         container = 'body';

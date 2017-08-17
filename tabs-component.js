@@ -17,12 +17,12 @@ export default {
 
 /* @ngInject */
 function Ctrl($scope) {
-  var self = this;
-  var panesMap;
+  const self = this;
+  let panesMap;
 
   self.$onInit = function() {
     self.panes = $scope.panes = [];
-    var panesMap = {};
+    panesMap = {};
     panesMap.none = [];
   };
 

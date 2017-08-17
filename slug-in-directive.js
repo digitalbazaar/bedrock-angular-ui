@@ -13,8 +13,8 @@ export default function factory($filter, $parse) {
     restrict: 'A',
     require: 'ngModel',
     link: function(scope, element, attrs, ngModel) {
-      var slug = $filter('slug');
-      var set = $parse(attrs.ngModel).assign || angular.noop;
+      const slug = $filter('slug');
+      const set = $parse(attrs.ngModel).assign || angular.noop;
 
       // if slug-in attribute is set, use it to update ng-model
       scope.$watch(attrs.brSlugIn, function(value) {
@@ -24,7 +24,7 @@ export default function factory($filter, $parse) {
         set(scope, slug(value));
       });
 
-      var namespace = '.slugInDirective';
+      const namespace = '.slugInDirective';
       scope.$on('$destroy', function() {
         element.off(namespace);
       });
@@ -33,7 +33,7 @@ export default function factory($filter, $parse) {
       });
 
       // replace with previous initial value on blur if value is blank
-      var last = '';
+      let last = '';
       element.on('focus' + namespace, function() {
         last = ngModel.$modelValue;
       });
@@ -65,7 +65,7 @@ export default function factory($filter, $parse) {
 
       // convert view value into slug
       ngModel.$parsers.push(function(v) {
-        var parsed = slug(v);
+        const parsed = slug(v);
         // force view to match model
         if(parsed !== ngModel.$viewValue) {
           ngModel.$setViewValue(parsed);

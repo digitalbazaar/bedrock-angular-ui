@@ -17,7 +17,7 @@ export default {
 
 /* @ngInject */
 function Ctrl($attrs, $scope) {
-  var self = this;
+  const self = this;
 
   $attrs.brOptions = $attrs.brOptions || {};
   $attrs.$observe('brOptions', function(value) {
