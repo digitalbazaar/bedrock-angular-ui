@@ -1,5 +1,7 @@
 # bedrock-angular-ui ChangeLog
 
+## 4.0.0 - 2018-03-19
+
 ### Changed
 - Use ES6 syntax.
 - **BREAKING**: Switch to material design.
