@@ -1,5 +1,12 @@
 # bedrock-angular-ui ChangeLog
 
+### Changed
+- Use ES6 syntax.
+- **BREAKING**: Switch to material design.
+
+### Removed
+- **BREAKING**: Remove bower support.
+
 ## 3.0.0 - 2017-05-30
 
 ### Changed
